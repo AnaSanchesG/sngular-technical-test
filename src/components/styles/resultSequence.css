@@ -1,0 +1,11 @@
+.card-content{
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title-content{
+font-size: 40px;
+color: #135D66;
+}

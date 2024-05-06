@@ -59,7 +59,7 @@ const getPrimeSequence = (number) => {
     }
   }
 
-  prime = primeArray[primeArray - 1];
+  prime = primeArray[primeArray.length - 1];
 
   return prime;
 };
