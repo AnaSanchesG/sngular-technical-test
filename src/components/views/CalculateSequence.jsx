@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import { getSequenceResult } from "../../helpers/getSequenceResult";
 import { validateForm } from "../../helpers/validateForm";
 
+import './../styles/calculateSequence.css';
+
 export const CalculateSequence = ({ onCalculateSequence }) => {
   const [value, setValue] = useState("");
 
@@ -37,10 +39,10 @@ export const CalculateSequence = ({ onCalculateSequence }) => {
   };
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center mb-2 mt-3">
       <form action="">
         <input
-          type="number"
+          type="text"
           placeholder="Valor"
           className="form-control w-75 d-inline mt-2"
           value={value}
@@ -48,7 +50,7 @@ export const CalculateSequence = ({ onCalculateSequence }) => {
         />
         <button
           type="submit"
-          className="btn btn-outline-primary d-inline"
+          className="custom-btn d-inline"
           onClick={onSubmit}
         >
           =

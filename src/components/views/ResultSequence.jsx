@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 import "./../styles/resultSequence.css";
 
 export const ResultSequence = ({ result }) => {
-
   const { value, sequenceResult, isError, typeError } = result;
 
   return (
     <>
       <div className="card-content">
-        <h1 className="title-content">Prueba Sngular</h1>
-        <p className="text-content"> Resultado</p>
-        <span> {sequenceResult}</span>
-        <p className="d-flex justify-content-center">
-          para el valor <span>{value}</span>
-        </p>
+        <div className="d-flex justify-content-center">
+          <p className="title-content border-title">Prueba Sngular</p>
+        </div>
+        <p className="text-content mb-0 pt-3"> Resultado</p>
+        <span className="text-result"> {sequenceResult ? sequenceResult : '---'}</span>
+        <p className="text-content">para el valor ingresado:</p>
+        <span className="text-value">{ value ? value : '---'}</span>
         {isError && <p className="error-message">{typeError}</p>}
       </div>
     </>
