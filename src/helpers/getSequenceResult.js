@@ -49,7 +49,7 @@ const getPrimeSequence = (number) => {
   const primeArray = [];
   let prime;
 
-  if(number <= 1 || typeof number !== 'number'){
+  if(number < 1 || typeof number !== 'number'){
     return 0;
   }
 
