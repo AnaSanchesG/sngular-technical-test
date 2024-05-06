@@ -1,8 +1,6 @@
 export const validateForm = (value) => {
   const transformValue = parseFloat(value);
 
-  console.log(`Número prueba: ${value}`);
-
   let status = {
     isError: false,
     typeError: " ",

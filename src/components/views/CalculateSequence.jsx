@@ -24,10 +24,9 @@ export const CalculateSequence = ({ onCalculateSequence }) => {
       typeError: " ",
     };
 
-    console.log(isError)
     if (!isError) {
       const result = getSequenceResult(parseFloat(value));
-      console.log(`Resultado: ${result}`);
+
       responseState = { ...responseState, sequenceResult: result };
     } else {
       responseState = { ...responseState, isError, typeError };
