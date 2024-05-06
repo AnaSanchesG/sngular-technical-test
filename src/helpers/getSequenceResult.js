@@ -1,5 +1,5 @@
 const getTriangularSequence = (number) => {
-  console.log(`valor entrada: ${number}`);
+  console.log(`valor entrada triangular: ${number}`);
 
     if (number <= 0 || typeof number !== 'number') {
         return 0;
@@ -11,7 +11,7 @@ const getTriangularSequence = (number) => {
 };
 
 const getFibonnaciSequence = (number) => {
-  console.log(`valor entrada: ${number}`);
+  console.log(`valor entrada fibonacci: ${number}`);
 
   if (number <= 1 || typeof number !== 'number') {
     return 0;
@@ -44,7 +44,7 @@ const isPrime = (number) => {
 };
 
 const getPrimeSequence = (number) => {
-  console.log(`valor entrada: ${number}`);
+  console.log(`valor entrada primo: ${number}`);
 
   const primeArray = [];
   let prime;
@@ -59,6 +59,7 @@ const getPrimeSequence = (number) => {
     }
   }
 
+  console.log(primeArray)
   prime = primeArray[primeArray.length - 1];
 
   return prime;
@@ -71,9 +72,10 @@ export const getSequenceResult = (number) => {
   const fibonacci = getFibonnaciSequence(number + 2);
   const prime = getPrimeSequence(number - 1);
 
-  console.log(`Valores individuales: ${ triangular} ${fibonacci} ${prime}`)
+  console.log(`Valores individuales: triangular-${ triangular} fibonacci-${fibonacci} prime-${prime}`)
 
   result = 4*triangular - 2*prime + fibonacci;
+  console.log(result)
 
   return result;
 };

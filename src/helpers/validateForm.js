@@ -8,6 +8,20 @@ export const validateForm = (value) => {
     typeError: " ",
   };
 
+  if (transformValue === 0) {
+    return (status = {
+      isError: false,
+      typeError: " ",
+    });
+  }
+
+  if(!Number.isInteger(transformValue)){
+    return (status = {
+      isError: true,
+      typeError: "Solo se admiten números enteros",
+    });
+  }
+
   if (!transformValue) {
     return (status = {
       isError: true,
@@ -22,7 +36,7 @@ export const validateForm = (value) => {
     });
   }
 
-  if (transformValue <= 0) {
+  if (transformValue < 0) {
     return (status = {
       isError: true,
       typeError: "La serie solo trabaja con números positivos",
